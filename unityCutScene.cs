@@ -35,6 +35,7 @@ public class PathFollower : MonoBehaviour
     void Update()
     {
         transform.position = Vector3.MoveTowards(transform.position, targetPoint.position, speed * Time.deltaTime);
+        transform.rotation = targetPoint.rotation;
         if (Vector3.Distance(transform.position, targetPoint.position) < 0.1f)
         {
             index++;
